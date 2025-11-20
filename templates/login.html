@@ -10,9 +10,11 @@
 <body>
     {% block content %}
     <div class="container">
-        <h1>Přihlášení</h1>
-
-        <div>{{ render_form(form) }}</div>
+        <form method="POST" class="login-form">
+            {{ form.hidden_tag() }}
+            {{ form.passwd(class="form-control") }}
+            {{ form.submit(class="btn btn-primary custom-submit") }}
+        </form>
     </div>
     {% endblock %}
 </body>
