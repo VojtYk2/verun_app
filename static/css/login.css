@@ -1,9 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    cursor: url('../img/cursor.png'), auto;
 }
-h1 {
+.container {
     text-align: center;
     margin: auto;
     margin-top: 20%;

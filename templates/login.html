@@ -1,0 +1,19 @@
+{% from 'bootstrap5/form.html' import render_form %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>Přihlášení</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>Přihlášení</h1>
+
+        <div>{{ render_form(form) }}</div>
+    </div>
+    {% endblock %}
+</body>
+</html>
