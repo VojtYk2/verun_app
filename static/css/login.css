@@ -14,9 +14,7 @@ body {
     background-image: url('../img/login_background.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right)
-             env(safe-area-inset-bottom) env(safe-area-inset-left);
+    background-size: contain;
 }
 .container {
     height: 100%;
