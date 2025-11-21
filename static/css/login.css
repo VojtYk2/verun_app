@@ -5,17 +5,18 @@ html, body {
     padding: 0;
 }
 html {
-    background-image: url('../img/login_background.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
+    background-color: #fdb0c0;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     margin: 0;
+    background-image: url('../img/login_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .container {
     height: 100%;
