@@ -7,6 +7,26 @@
     <title>Domovská stránka</title>
 </head>
 <body>
-    <h1>Jsi tady moc brzy</h1>
+    <main>
+        <h1>Domovská stránka</h1>
+        <div class = "horizontal">
+            <div class="remaining">
+                <div class ="center">
+                    <h2>Zbývá dní:</h2>
+                    <h1>{{ data['days'] }}</h1>
+                </div>
+            </div>
+            <div class="todo">
+                <div class ="center">
+                    <h2>Plány na Vánoce</h2>
+                    <ul>
+                        <li>Bruslení v centru Ostravy</li>
+                        <li>Stará Breda</li>
+                        <li>Hláska</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

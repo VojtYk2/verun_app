@@ -1,10 +1,87 @@
+html {
+    background-color: #fdb0c0;
+}
 body {
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    cursor: url('../img/cursor.png'), auto;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/login_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
 }
 h1 {
     text-align: center;
     margin: auto;
-    margin-top: 20%;
+}
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    aspect-ratio: none;
+    height: calc(100vh - 120px - 36px);
+}
+.horizontal > * {
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background-color: #fdb0c0;
+}
+.remaining, .todo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 4px solid #ff4b69;
+    margin: 0;
+}
+.remaining * {
+    text-align: center;
+}
+.todo h2 {
+    text-align: center;
+}
+li {
+    font-size: large;
+}
+.calendar {
+    width: 100%;
+}
+.calendar table {
+    width: calc(100% - 20px);
+    aspect-ratio: 7 / 5;
+    margin: 10px;
+}
+.calendar * {
+    text-align: center;
+}
+tbody {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+td, th {
+    background-color: rgb(255, 223, 228);
+    border-radius: 50%;
+    width: calc(100% / 7);
+    height: calc(100% / 5);
+}
+@media (max-width: 900px) {
+    main {
+        padding-top: 0;
+        margin-top: 40px;
+    }
+    .remaining, .todo {
+        width: 100%;
+    }
+    .horizontal {
+        flex-direction: column;
+        height: auto;
+    }
 }

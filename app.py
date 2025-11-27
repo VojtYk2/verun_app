@@ -41,7 +41,7 @@ def home():
         return render_template('login.html', form=form)
     else:
         if 'alt' not in session:
-            data = {'days': (date(2025, 12, 19) - date.today()).days }
+            data = {'days': (date(2025, 12, 20) - date.today()).days }
             return render_template('index.html', data=data)
         else:
             return render_template('my_side.html')
