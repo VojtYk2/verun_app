@@ -9,35 +9,50 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 main {
     display: flex;
     flex-direction: column;
-    padding: 40px;
     gap: 40px;
+    height: 100%;
 }
 h1 {
     text-align: center;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    font-size: 36px;
 }
 .horizontal {
     display: flex;
     flex-direction: row;
     gap: 40px;
     aspect-ratio: none;
-    height: calc(100vh - 120px - 36px);
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 100%;
 }
-.horizontal > * {
-    aspect-ratio: 1 / 1;
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    aspect-ratio: none;
+    height: calc(100% - 40px);
+    flex-grow: 1;
+}
+.vertical > * {
+    aspect-ratio: none;
     border-radius: 20px;
     background-color: #fdb0c0;
+    height: calc(50%);
 }
 .remaining, .todo {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 4px solid #ff4b69;
+    box-sizing: border-box;
     margin: 0;
 }
 .remaining * {
@@ -50,10 +65,15 @@ li {
     font-size: large;
 }
 .calendar {
-    width: 100%;
+    background-color: #fdb0c0;
+    border: 4px solid #ff4b69;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: calc(100% - 40px);
+    font-size: 40px;
 }
 .calendar table {
-    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     aspect-ratio: 7 / 5;
     margin: 10px;
 }
@@ -66,22 +86,43 @@ tbody {
     padding: 0;
     margin: 0;
 }
-td, th {
+th {
+    width: calc(100% / 7);
+    height: calc(100% / 5);
+}
+td {
     background-color: rgb(255, 223, 228);
     border-radius: 50%;
     width: calc(100% / 7);
     height: calc(100% / 5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, z-index 0.5s ease;
+}
+td:hover {
+    background-color: #ff9aa2;
+    cursor: pointer;
+    color: black;
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.red {
+    background-color: #ff0831;
+    color: white;
 }
 @media (max-width: 900px) {
     main {
         padding-top: 0;
-        margin-top: 40px;
     }
     .remaining, .todo {
         width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     .horizontal {
         flex-direction: column;
         height: auto;
+    }
+    .calendar {
+        font-size: 26px;
+        aspect-ratio: 7 / 5;
     }
 }

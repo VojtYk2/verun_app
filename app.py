@@ -6,6 +6,7 @@ from flask_bootstrap import Bootstrap5
 import json
 import secrets
 from datetime import date
+import random
 
 app = Flask(__name__)
 app.secret_key = secrets.token_urlsafe(16)
@@ -46,23 +47,39 @@ def home():
         else:
             return render_template('my_side.html')
 
-@app.route('/day_1')
-def day_1():
+@app.route('/day_x')
+def day_x():
     try:
-        data_day_1 = load('day_1.json')
+        data_day_x = load('day_x.json')
     except Exception:
-        data_day_1 = {'gameSave': [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0]}
-    return render_template('day_1.html', data_day_1=data_day_1)
+        data_day_x = {'gameSave': [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0]}
+    return render_template('day_x.html', data_day_x=data_day_x)
 
-@app.route('/day_1_play', methods=['POST'])
-def day_1_play():
+@app.route('/day_x_play', methods=['POST'])
+def day_x_play():
     data = request.get_json()
     try:
-        data_day_1 = load('day_1.json')
+        data_day_x = load('day_x.json')
     except Exception:
-        data_day_1 = {'gameSave': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
-    data_day_1['gameSave'][data[0] + data[1]] = 1
-    save(data_day_1, 'day_1.json')
+        data_day_x = {'gameSave': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+    data_day_x['gameSave'][data[0] + data[1]] = 1
+    save(data_day_x, 'day_x.json')
+
+@app.route('/day_1')
+def day_1():
+    data = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7]
+    random.shuffle(data)
+    data_day_1 = {'layout': data}
+    return render_template('day_1.html', data_day_1=data_day_1)
+
+@app.route('/day_2')
+def day_2():
+    return
+    image1 = {'path':'img/day_2_img_1.png', 'date':'20.12.2024'}
+    image2 = {'path':'img/day_2_img_2.png', 'date':'21.12.2024'}
+    image3 = {'path':'img/day_2_img_3.png', 'date':'22.12.2024'}
+    images = [image1, image2, image3]
+    return render_template('day_2.html', image = random.choice(images))
 
 if __name__ == '__main__':
     app.run(debug=True)

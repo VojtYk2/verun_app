@@ -4,27 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Domovská stránka</title>
+    <title>Adventní Kalendář</title>
 </head>
 <body>
     <main>
-        <h1>Domovská stránka</h1>
-        <div class = "horizontal">
-            <div class="remaining">
-                <div class ="center">
-                    <h2>Zbývá dní:</h2>
-                    <h1>{{ data['days'] }}</h1>
+        <h1>Adventní Kalendář</h1>
+        <div class="horizontal">
+            <div class = "vertical">
+                <div class="remaining">
+                    <div class ="center">
+                        <h2>Zbývá dní:</h2>
+                        <h1>{{ data['days'] }}</h1>
+                    </div>
+                </div>
+                <div class="todo">
+                    <div class ="center">
+                        <h2>Plány na Vánoce</h2>
+                        <ul>
+                            <li>Bruslení v centru Ostravy</li>
+                            <li>Stará Breda</li>
+                            <li>Hláska</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="todo">
-                <div class ="center">
-                    <h2>Plány na Vánoce</h2>
-                    <ul>
-                        <li>Bruslení v centru Ostravy</li>
-                        <li>Stará Breda</li>
-                        <li>Hláska</li>
-                    </ul>
-                </div>
+            <div class="calendar">
+                <table>
+                    <tr>
+                        <th>Po</th>
+                        <th>Út</th>
+                        <th>St</th>
+                        <th>Čt</th>
+                        <th>Pá</th>
+                        <th>So</th>
+                        <th>Ne</th>
+                    </tr>
+                    <tr>
+                        <td onclick="location.href='{{ url_for('day_1') }}'">1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td class="red">20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </main>
