@@ -24,10 +24,10 @@ function fillSquare(num, data) {
             square.innerHTML = '<img src="/static/img/heart6.png" alt="heart6"></img>';
         }
         else if(data === 6) {
-            square.innerHTML = '<img src="/static/img/heart7.jpeg" alt="heart7"></img>';
+            square.innerHTML = '<img src="/static/img/heart7.png" alt="heart7"></img>';
         }
         else if(data === 7) {
-            square.innerHTML = '<img src="/static/img/heart8.jpeg" alt="heart8"></img>';
+            square.innerHTML = '<img src="/static/img/heart8.png" alt="heart8"></img>';
         }
     }
 }
