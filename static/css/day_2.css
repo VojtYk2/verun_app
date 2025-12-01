@@ -1,0 +1,55 @@
+html {
+    background-color: #fdb0c0;
+}
+body {
+    background-image: url('../img/login_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+header {
+    text-align: center;
+    padding: 40px;
+}
+h1 {
+    margin: 0;
+}
+main {
+    aspect-ratio: 1 / 1;
+    height: calc(100vh - 2em - 120px);
+    margin: auto;
+    text-align: center;
+}
+img {
+    max-width: 300px;
+}
+input {
+    margin: 20px;
+}
+button {
+    margin: auto;
+    display: block;
+    padding: 10px 30px;
+    border: 3px solid #ff4b69;
+    color: #ff4b69;
+    font-weight: 600;
+    background-color: #fdb0c0;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: #ff4b69;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    main {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        aspect-ratio: 1 / 1;
+    }
+}

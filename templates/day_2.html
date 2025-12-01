@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/day_2.css') }}">
+    <script src="{{ url_for('static', filename='js/day_2.js') }}" defer></script>
+    <title>Den 2</title>
+</head>
+<body>
+    <header>
+        <h1>Druhý den - Uhodni Datum</h1>
+    </header>
+    <main>
+        <img src="{{ url_for('static', filename=image['path']) }}" alt="Image">
+        <form>
+            <input type="date" name="date" id="date">
+            <button type="button" onclick="checkDate('{{ image['date'] }}')">Odeslat</button>
+        </form>
+    </main>
+</body>
+</html>

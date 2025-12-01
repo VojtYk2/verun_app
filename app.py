@@ -74,11 +74,11 @@ def day_1():
 
 @app.route('/day_2')
 def day_2():
-    return
-    image1 = {'path':'img/day_2_img_1.png', 'date':'20.12.2024'}
-    image2 = {'path':'img/day_2_img_2.png', 'date':'21.12.2024'}
-    image3 = {'path':'img/day_2_img_3.png', 'date':'22.12.2024'}
-    images = [image1, image2, image3]
+    image1 = {'path':'img/day_2_1.jpg', 'date':'2025-10-09'}
+    image2 = {'path':'img/day_2_2.jpg', 'date':'2025-09-02'}
+    image3 = {'path':'img/day_2_3.jpg', 'date':'2025-09-30'}
+    image4 = {'path':'img/day_2_4.png', 'date':'2025-08-21'}
+    images = [image1, image2, image3, image4]
     return render_template('day_2.html', image = random.choice(images))
 
 if __name__ == '__main__':
