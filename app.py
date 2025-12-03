@@ -81,5 +81,8 @@ def day_2():
     images = [image1, image2, image3, image4]
     return render_template('day_2.html', image = random.choice(images))
 
+@app.route('/day_3')
+def day_3():
+    return render_template('day_3.html')
 if __name__ == '__main__':
     app.run(debug=True)

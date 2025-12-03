@@ -1,0 +1,95 @@
+html {
+    background-color: #fdb0c0;
+}
+body {
+    background-image: url('../img/login_background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+header {
+    text-align: center;
+    padding: 40px;
+}
+h1 {
+    margin: 0;
+}
+main {
+    aspect-ratio: 1 / 1;
+    height: calc(100vh - 2em - 120px);
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+button {
+    margin: auto;
+    width: 100px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.red {
+    aspect-ratio: 1 / 1;
+    background-color: #ff9d9d;
+    border: 3px solid #ff4b4b;
+}
+.red:hover {
+    cursor: pointer;
+}
+.blue {
+    aspect-ratio: 1 / 1;
+    background-color: #9dbcff;
+    border: 3px solid #4b5dff;
+}
+.blue:hover {
+    cursor: pointer;
+}
+.yellow {
+    aspect-ratio: 1 / 1;
+    background-color: #f6ffca;
+    border: 3px solid #cae000;
+}
+.yellow:hover {
+    cursor: pointer;
+}
+.green {
+    aspect-ratio: 1 / 1;
+    background-color: #b8ffbb;
+    border: 3px solid #00ba44;
+}
+.green:hover {
+    cursor: pointer;
+}
+.play-again {
+    margin: auto;
+    display: block;
+    padding: 10px 30px;
+    border: 3px solid #ff4b69;
+    color: #ff4b69;
+    font-weight: 600;
+    background-color: #fdb0c0;
+    border-radius: 8px;
+}
+.play-again:hover {
+    background-color: #ff4b69;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    main {
+        width: 80%;
+        height: 70%;
+        margin: auto;
+        aspect-ratio: none;
+    }
+    button {
+        width: 70px;
+    }
+    .play-again {
+        width: 200px;
+    }
+}
